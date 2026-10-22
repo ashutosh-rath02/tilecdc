@@ -91,3 +91,27 @@ def test_avg_cap_and_seed_validation():
     with pytest.raises(ValueError):
         tilecdc.Chunker(seed=-1)
     assert tilecdc.Chunker(seed=2**64 - 1).chunk(b"a" * 5000)
+
+
+def test_amx_tile_config_loaded_from_readonly_memory():
+    """Regression test for 0.1.0, whose manylinux wheel crashed on AMX CPUs: the
+    compiler dropped the stores that built the tile configuration on the stack.
+    The configuration must be loaded from a constant (RIP-relative operand).
+    Runs anywhere objdump exists, so CI catches it without AMX hardware."""
+    import shutil
+    import subprocess
+
+    from tilecdc import _tilecdc
+
+    objdump = shutil.which("objdump")
+    if not objdump:
+        pytest.skip("objdump not available")
+    asm = subprocess.run([objdump, "-d", "--no-show-raw-insn", _tilecdc.__file__], capture_output=True, text=True).stdout
+    loads, inside = [], False
+    for line in asm.splitlines():
+        if line.endswith(">:"):
+            inside = "<amx_configure" in line
+        elif inside and "ldtilecfg" in line:
+            loads.append(line.strip())
+    assert loads, "amx_configure not found in the extension"
+    assert all("(%rip)" in l for l in loads), loads

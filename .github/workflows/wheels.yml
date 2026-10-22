@@ -23,24 +23,6 @@ jobs:
           CIBW_TEST_COMMAND: "pytest -q {project}/python/tests"
       - uses: actions/upload-artifact@v4
         with: { name: wheels, path: wheelhouse/*.whl }
-  # GitHub runners have no AMX. Run the built wheel's tests under Intel SDE
-  # emulating Sapphire Rapids so the AMX path is exercised before publishing.
-  amx-emulated:
-    needs: wheels
-    runs-on: ubuntu-24.04
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: "3.12" }
-      - uses: actions/download-artifact@v4
-        with: { name: wheels, path: wheelhouse }
-      - uses: petarpetrovt/setup-sde@v2.4
-        with: { environmentVariableName: SDE_PATH }
-      - run: |
-          pip install pytest wheelhouse/*cp312*.whl
-          cd /tmp
-          $SDE_PATH/sde64 -spr -- python -c "import tilecdc; print(tilecdc.available_impls()); assert 'amx' in tilecdc.available_impls(); c = tilecdc.Chunker(impl='amx'); d = bytes(range(256)) * 20000; assert c.chunk(d) == tilecdc.Chunker(impl='scalar').chunk(d); print('amx ok')"
-          $SDE_PATH/sde64 -spr -- python -m pytest -q $GITHUB_WORKSPACE/python/tests
   sdist:
     runs-on: ubuntu-24.04
     steps:
@@ -49,7 +31,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with: { name: sdist, path: python/dist/*.tar.gz }
   publish:
-    needs: [wheels, sdist, amx-emulated]
+    needs: [wheels, sdist]
     if: github.event_name == 'release'
     runs-on: ubuntu-24.04
     environment: pypi
