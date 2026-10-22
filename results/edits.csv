@@ -1,0 +1,16 @@
+numpy-src,# mean chunk: fastcdc-c 10614, tilecdc default 9576, tilecdc matched (avg_size=9856) 10603
+numpy-src,# edit_kind,edits,fastcdc_c,tilecdc_default,tilecdc_matched (mean of 5 seeds)
+numpy-src,insert,10,99.821,99.819,99.788
+numpy-src,insert,100,98.195,98.399,98.221
+numpy-src,insert,1000,84.278,85.653,84.387
+numpy-src,delete,10,99.827,99.818,99.803
+numpy-src,delete,100,98.175,98.410,98.240
+numpy-src,delete,1000,84.354,85.677,84.433
+scipy-bin,# mean chunk: fastcdc-c 9972, tilecdc default 9175, tilecdc matched (avg_size=9600) 10006
+scipy-bin,# edit_kind,edits,fastcdc_c,tilecdc_default,tilecdc_matched (mean of 5 seeds)
+scipy-bin,insert,10,99.714,99.829,99.816
+scipy-bin,insert,100,98.185,98.662,98.560
+scipy-bin,insert,1000,88.500,89.041,88.185
+scipy-bin,delete,10,99.906,99.904,99.899
+scipy-bin,delete,100,98.325,98.685,98.602
+scipy-bin,delete,1000,88.785,89.582,88.835

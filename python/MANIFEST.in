@@ -1,0 +1,2 @@
+include csrc/tilecdc.c csrc/tilecdc.h README.md LICENSE
+recursive-include tests *.py

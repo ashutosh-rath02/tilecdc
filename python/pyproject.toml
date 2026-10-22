@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tilecdc"
+version = "0.1.0"
+description = "Fast content-defined chunking on CPU matrix units (Intel AMX), with AVX-512 and portable fallbacks that give identical boundaries"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Ashutosh Rath" }]
+requires-python = ">=3.9"
+keywords = ["deduplication", "chunking", "cdc", "fastcdc", "amx", "avx512", "backup"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: C",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: System :: Archiving :: Backup",
+    "Topic :: System :: Archiving :: Compression",
+]
+
+[project.urls]
+Homepage = "https://github.com/ashutosh-rath02/tilecdc"
+
+[project.scripts]
+tilecdc = "tilecdc.__main__:main"
+
+[tool.setuptools]
+packages = ["tilecdc"]

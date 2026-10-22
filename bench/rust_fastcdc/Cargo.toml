@@ -1,0 +1,12 @@
+[package]
+name = "fastcdc_bench"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+fastcdc = "3.2"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

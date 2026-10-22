@@ -1,0 +1,19 @@
+implementations available: scalar=1 avx512=1 amx=1
+ok: 4 parameter sets x 6 data kinds x 1 MiB equal the oracle (whole and streaming)
+ok: every length within 70 bytes of 0/min/avg/max equals the oracle, 3 alignments
+ok: 20 seeds x ~8 MiB, all implementations identical
+ok: data/src/Django-5.0.14.tar (60805120 bytes) identical across implementations
+ok: data/src/django-5.1.15.tar (61573120 bytes) identical across implementations
+ok: data/src/django-5.2.18.tar (62607360 bytes) identical across implementations
+ok: data/src/numpy-2.1.0.tar (77025280 bytes) identical across implementations
+ok: data/src/numpy-2.2.0.tar (78888960 bytes) identical across implementations
+ok: data/src/numpy-2.3.0.tar (79902720 bytes) identical across implementations
+ok: data/bin/numpy-2.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.tar (56145920 bytes) identical across implementations
+ok: data/bin/numpy-2.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.tar (56422400 bytes) identical across implementations
+ok: data/bin/pandas-2.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.tar (45670400 bytes) identical across implementations
+ok: data/bin/pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.tar (45854720 bytes) identical across implementations
+ok: data/bin/pandas-2.3.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.tar (44820480 bytes) identical across implementations
+ok: data/bin/scipy-1.14.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.tar (132997120 bytes) identical across implementations
+ok: data/bin/scipy-1.15.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.tar (132085760 bytes) identical across implementations
+ok: data/bin/scipy-1.16.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.tar (117514240 bytes) identical across implementations
+ALL TESTS PASSED (18078 comparisons)

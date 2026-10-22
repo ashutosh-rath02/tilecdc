@@ -1,0 +1,14 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: make all && ./build/test_tilecdc
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: |
+          pip install build pytest
+          cd python && python -m build && pip install dist/*.whl
+          cd /tmp && python -m pytest -q $GITHUB_WORKSPACE/python/tests
