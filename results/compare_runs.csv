@@ -1,0 +1,90 @@
+1,# dataset,method,bytes,gbps,chunks,avg_kib,sd_kib,p5_kib,p95_kib,dedup
+1,SRC,fastcdc-c,420802560,1.831,38985,10.541,5.511,3.71,18.46,1.3114
+1,SRC,tilecdc-scalar,420802560,0.561,43003,9.556,5.238,2.89,17.09,1.3196
+1,SRC,tilecdc-avx512,420802560,2.933,43003,9.556,5.238,2.89,17.09,1.3196
+1,SRC,tilecdc-amx,420802560,4.985,43003,9.556,5.238,2.89,17.09,1.3196
+1,# fingerprint-64 pass: 2.36 GB/s (6)
+1,# dataset,method,bytes,gbps,chunks,avg_kib,sd_kib,p5_kib,p95_kib,dedup
+1,BIN,fastcdc-c,631511040,2.052,63761,9.672,4.873,3.58,15.04,1.2653
+1,BIN,tilecdc-scalar,631511040,0.533,70137,8.793,4.832,2.81,14.21,1.2691
+1,BIN,tilecdc-avx512,631511040,2.255,70137,8.793,4.832,2.81,14.21,1.2691
+1,BIN,tilecdc-amx,631511040,4.820,70137,8.793,4.832,2.81,14.21,1.2691
+1,# fingerprint-64 pass: 2.27 GB/s (6)
+1,# dataset,method,bytes,gbps,chunks,avg_kib,sd_kib,p5_kib,p95_kib,dedup
+1,RAND,fastcdc-c,268435456,2.101,28768,9.112,2.758,3.57,13.61,1.0000
+1,RAND,tilecdc-scalar,268435456,0.592,31579,8.301,3.071,2.80,13.13,1.0000
+1,RAND,tilecdc-avx512,268435456,2.739,31579,8.301,3.071,2.80,13.13,1.0000
+1,RAND,tilecdc-amx,268435456,4.397,31579,8.301,3.071,2.80,13.13,1.0000
+1,# fingerprint-64 pass: 2.32 GB/s (3)
+2,# dataset,method,bytes,gbps,chunks,avg_kib,sd_kib,p5_kib,p95_kib,dedup
+2,SRC,fastcdc-c,420802560,1.660,38985,10.541,5.511,3.71,18.46,1.3114
+2,SRC,tilecdc-scalar,420802560,0.585,43003,9.556,5.238,2.89,17.09,1.3196
+2,SRC,tilecdc-avx512,420802560,2.460,43003,9.556,5.238,2.89,17.09,1.3196
+2,SRC,tilecdc-amx,420802560,4.902,43003,9.556,5.238,2.89,17.09,1.3196
+2,# fingerprint-64 pass: 2.12 GB/s (6)
+2,# dataset,method,bytes,gbps,chunks,avg_kib,sd_kib,p5_kib,p95_kib,dedup
+2,BIN,fastcdc-c,631511040,1.882,63761,9.672,4.873,3.58,15.04,1.2653
+2,BIN,tilecdc-scalar,631511040,0.525,70137,8.793,4.832,2.81,14.21,1.2691
+2,BIN,tilecdc-avx512,631511040,2.539,70137,8.793,4.832,2.81,14.21,1.2691
+2,BIN,tilecdc-amx,631511040,4.876,70137,8.793,4.832,2.81,14.21,1.2691
+2,# fingerprint-64 pass: 2.46 GB/s (6)
+2,# dataset,method,bytes,gbps,chunks,avg_kib,sd_kib,p5_kib,p95_kib,dedup
+2,RAND,fastcdc-c,268435456,2.058,28768,9.112,2.758,3.57,13.61,1.0000
+2,RAND,tilecdc-scalar,268435456,0.576,31579,8.301,3.071,2.80,13.13,1.0000
+2,RAND,tilecdc-avx512,268435456,2.929,31579,8.301,3.071,2.80,13.13,1.0000
+2,RAND,tilecdc-amx,268435456,4.274,31579,8.301,3.071,2.80,13.13,1.0000
+2,# fingerprint-64 pass: 2.21 GB/s (3)
+3,# dataset,method,bytes,gbps,chunks,avg_kib,sd_kib,p5_kib,p95_kib,dedup
+3,SRC,fastcdc-c,420802560,2.004,38985,10.541,5.511,3.71,18.46,1.3114
+3,SRC,tilecdc-scalar,420802560,0.501,43003,9.556,5.238,2.89,17.09,1.3196
+3,SRC,tilecdc-avx512,420802560,2.396,43003,9.556,5.238,2.89,17.09,1.3196
+3,SRC,tilecdc-amx,420802560,4.650,43003,9.556,5.238,2.89,17.09,1.3196
+3,# fingerprint-64 pass: 2.50 GB/s (6)
+3,# dataset,method,bytes,gbps,chunks,avg_kib,sd_kib,p5_kib,p95_kib,dedup
+3,BIN,fastcdc-c,631511040,1.849,63761,9.672,4.873,3.58,15.04,1.2653
+3,BIN,tilecdc-scalar,631511040,0.534,70137,8.793,4.832,2.81,14.21,1.2691
+3,BIN,tilecdc-avx512,631511040,2.790,70137,8.793,4.832,2.81,14.21,1.2691
+3,BIN,tilecdc-amx,631511040,4.722,70137,8.793,4.832,2.81,14.21,1.2691
+3,# fingerprint-64 pass: 2.20 GB/s (6)
+3,# dataset,method,bytes,gbps,chunks,avg_kib,sd_kib,p5_kib,p95_kib,dedup
+3,RAND,fastcdc-c,268435456,2.051,28768,9.112,2.758,3.57,13.61,1.0000
+3,RAND,tilecdc-scalar,268435456,0.629,31579,8.301,3.071,2.80,13.13,1.0000
+3,RAND,tilecdc-avx512,268435456,2.901,31579,8.301,3.071,2.80,13.13,1.0000
+3,RAND,tilecdc-amx,268435456,4.516,31579,8.301,3.071,2.80,13.13,1.0000
+3,# fingerprint-64 pass: 2.12 GB/s (3)
+4,# dataset,method,bytes,gbps,chunks,avg_kib,sd_kib,p5_kib,p95_kib,dedup
+4,SRC,fastcdc-c,420802560,1.884,38985,10.541,5.511,3.71,18.46,1.3114
+4,SRC,tilecdc-scalar,420802560,0.564,43003,9.556,5.238,2.89,17.09,1.3196
+4,SRC,tilecdc-avx512,420802560,2.377,43003,9.556,5.238,2.89,17.09,1.3196
+4,SRC,tilecdc-amx,420802560,4.626,43003,9.556,5.238,2.89,17.09,1.3196
+4,# fingerprint-64 pass: 2.08 GB/s (6)
+4,# dataset,method,bytes,gbps,chunks,avg_kib,sd_kib,p5_kib,p95_kib,dedup
+4,BIN,fastcdc-c,631511040,1.865,63761,9.672,4.873,3.58,15.04,1.2653
+4,BIN,tilecdc-scalar,631511040,0.531,70137,8.793,4.832,2.81,14.21,1.2691
+4,BIN,tilecdc-avx512,631511040,2.651,70137,8.793,4.832,2.81,14.21,1.2691
+4,BIN,tilecdc-amx,631511040,5.161,70137,8.793,4.832,2.81,14.21,1.2691
+4,# fingerprint-64 pass: 2.29 GB/s (6)
+4,# dataset,method,bytes,gbps,chunks,avg_kib,sd_kib,p5_kib,p95_kib,dedup
+4,RAND,fastcdc-c,268435456,1.921,28768,9.112,2.758,3.57,13.61,1.0000
+4,RAND,tilecdc-scalar,268435456,0.645,31579,8.301,3.071,2.80,13.13,1.0000
+4,RAND,tilecdc-avx512,268435456,2.302,31579,8.301,3.071,2.80,13.13,1.0000
+4,RAND,tilecdc-amx,268435456,5.073,31579,8.301,3.071,2.80,13.13,1.0000
+4,# fingerprint-64 pass: 2.25 GB/s (3)
+5,# dataset,method,bytes,gbps,chunks,avg_kib,sd_kib,p5_kib,p95_kib,dedup
+5,SRC,fastcdc-c,420802560,1.854,38985,10.541,5.511,3.71,18.46,1.3114
+5,SRC,tilecdc-scalar,420802560,0.584,43003,9.556,5.238,2.89,17.09,1.3196
+5,SRC,tilecdc-avx512,420802560,2.375,43003,9.556,5.238,2.89,17.09,1.3196
+5,SRC,tilecdc-amx,420802560,4.458,43003,9.556,5.238,2.89,17.09,1.3196
+5,# fingerprint-64 pass: 2.04 GB/s (6)
+5,# dataset,method,bytes,gbps,chunks,avg_kib,sd_kib,p5_kib,p95_kib,dedup
+5,BIN,fastcdc-c,631511040,1.918,63761,9.672,4.873,3.58,15.04,1.2653
+5,BIN,tilecdc-scalar,631511040,0.552,70137,8.793,4.832,2.81,14.21,1.2691
+5,BIN,tilecdc-avx512,631511040,2.521,70137,8.793,4.832,2.81,14.21,1.2691
+5,BIN,tilecdc-amx,631511040,4.485,70137,8.793,4.832,2.81,14.21,1.2691
+5,# fingerprint-64 pass: 2.23 GB/s (6)
+5,# dataset,method,bytes,gbps,chunks,avg_kib,sd_kib,p5_kib,p95_kib,dedup
+5,RAND,fastcdc-c,268435456,2.044,28768,9.112,2.758,3.57,13.61,1.0000
+5,RAND,tilecdc-scalar,268435456,0.613,31579,8.301,3.071,2.80,13.13,1.0000
+5,RAND,tilecdc-avx512,268435456,2.191,31579,8.301,3.071,2.80,13.13,1.0000
+5,RAND,tilecdc-amx,268435456,4.933,31579,8.301,3.071,2.80,13.13,1.0000
+5,# fingerprint-64 pass: 2.25 GB/s (3)

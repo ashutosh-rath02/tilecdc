@@ -1,0 +1,26 @@
+SRC,# avg_target_kib,method,gbps,avg_kib,sd_kib,dedup
+SRC,4,fastcdc-c,1.807,5.245,2.603,1.4368
+SRC,4,tilecdc-avx512,2.721,4.812,2.656,1.4584
+SRC,4,tilecdc-amx,4.592,4.812,2.656,1.4584
+SRC,8,fastcdc-c,1.660,10.541,5.511,1.3114
+SRC,8,tilecdc-avx512,2.345,9.556,5.238,1.3196
+SRC,8,tilecdc-amx,5.040,9.556,5.238,1.3196
+SRC,16,fastcdc-c,1.751,20.927,10.668,1.1947
+SRC,16,tilecdc-avx512,2.498,18.368,10.346,1.2159
+SRC,16,tilecdc-amx,4.662,18.368,10.346,1.2159
+SRC,32,fastcdc-c,1.636,42.036,20.451,1.1136
+SRC,32,tilecdc-avx512,2.523,37.152,21.495,1.1310
+SRC,32,tilecdc-amx,5.170,37.152,21.495,1.1310
+BIN,# avg_target_kib,method,gbps,avg_kib,sd_kib,dedup
+BIN,4,fastcdc-c,1.688,4.823,2.414,1.3386
+BIN,4,tilecdc-avx512,2.348,4.392,2.460,1.3439
+BIN,4,tilecdc-amx,4.356,4.392,2.460,1.3439
+BIN,8,fastcdc-c,1.702,9.672,4.873,1.2653
+BIN,8,tilecdc-avx512,2.273,8.793,4.832,1.2691
+BIN,8,tilecdc-amx,4.538,8.793,4.832,1.2691
+BIN,16,fastcdc-c,1.697,19.530,9.501,1.1983
+BIN,16,tilecdc-avx512,2.397,16.792,9.469,1.2147
+BIN,16,tilecdc-amx,5.320,16.792,9.469,1.2147
+BIN,32,fastcdc-c,1.699,39.500,18.021,1.1482
+BIN,32,tilecdc-avx512,2.721,34.082,19.021,1.1599
+BIN,32,tilecdc-amx,4.841,34.082,19.021,1.1599

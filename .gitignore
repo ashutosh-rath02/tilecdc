@@ -1,0 +1,17 @@
+build/
+data/
+*.o
+python/build/
+python/dist/
+python/*.egg-info/
+python/csrc/
+python/LICENSE
+python/.pytest_cache/
+__pycache__/
+.pytest_cache/
+bench/rust_fastcdc/target/
+bench/rust_fastcdc/Cargo.lock
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/build.log

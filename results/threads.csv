@@ -1,0 +1,5 @@
+# method,threads,aggregate_gbps
+fastcdc-c,1,1.664
+fastcdc-c,2,3.325
+tilecdc-amx,1,4.068
+tilecdc-amx,2,8.309

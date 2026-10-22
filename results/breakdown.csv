@@ -1,0 +1,7 @@
+# stage,ns_per_byte,gbps_equiv
+sbox_avx512,0.0259,38.61
+hash+mix+test_amx,0.1877,5.33
+amx_loads+tdpbusd+1store,0.0607,16.47
+amx_loads+tdpbusd+stores,0.0781,12.80
+hash+mix+test_avx512,0.4073,2.46
+hash+mix+test_scalar,1.7381,0.58
