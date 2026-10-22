@@ -103,8 +103,12 @@ def test_amx_tile_config_loaded_from_readonly_memory():
 
     from tilecdc import _tilecdc
 
+    import os
+
     objdump = shutil.which("objdump")
     if not objdump:
+        if os.environ.get("CIBUILDWHEEL"):
+            pytest.fail("objdump missing in the wheel build environment; this check must run before publishing")
         pytest.skip("objdump not available")
     asm = subprocess.run([objdump, "-d", "--no-show-raw-insn", _tilecdc.__file__], capture_output=True, text=True).stdout
     loads, inside = [], False
