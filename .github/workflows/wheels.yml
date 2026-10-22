@@ -15,7 +15,7 @@ jobs:
         with: { package-dir: python }
         env:
           CIBW_ARCHS: x86_64
-          CIBW_SKIP: "*-musllinux_*"
+          CIBW_SKIP: "pp* *-musllinux_*"
           CIBW_MANYLINUX_X86_64_IMAGE: manylinux_2_28   # GCC 12+: AMX intrinsics
           CIBW_TEST_REQUIRES: pytest
           CIBW_TEST_COMMAND: "pytest -q {project}/python/tests"
