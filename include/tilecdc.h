@@ -38,7 +38,7 @@ extern "C" {
    of entropy, so masks of 17+ bits quantize: at a 64 KiB target the mean chunk
    size varied from 55 to 74 KiB across seeds (32 KiB: 32 to 37 KiB). */
 #define TILECDC_MAX_AVG 32768
-#define TILECDC_VERSION "0.1.0"
+#define TILECDC_VERSION "0.1.2"
 
 typedef enum { TILECDC_IMPL_AUTO = 0, TILECDC_IMPL_SCALAR = 1, TILECDC_IMPL_AVX512 = 2, TILECDC_IMPL_AMX = 3 } tilecdc_impl;
 

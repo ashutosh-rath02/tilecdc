@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tilecdc"
-version = "0.1.0"
+version = "0.1.2"
 description = "Fast content-defined chunking on CPU matrix units (Intel AMX), with AVX-512 and portable fallbacks that give identical boundaries"
 readme = "README.md"
 license = { text = "Apache-2.0" }

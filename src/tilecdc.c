@@ -170,23 +170,31 @@ static void block_avx512(const tilecdc *t, const uint8_t *y, uint64_t S[16], uin
     }
 }
 
-typedef struct { uint8_t palette, start; uint8_t r[14]; uint16_t colsb[16]; uint8_t rows[16]; } __attribute__((packed)) tilecfg;
+typedef struct { uint8_t palette, start; uint8_t r[14]; uint16_t colsb[16]; uint8_t rows[16]; } __attribute__((packed, aligned(64))) tilecfg;
+
+/* The tile configuration lives in read-only memory. Building it on the stack
+   lets some compilers (GCC 14 in manylinux_2_28) drop the stores, because they
+   do not model LDTILECFG as reading all 64 bytes; the CPU then loads a garbage
+   configuration and faults. */
+static const tilecfg TILECDC_CFG __attribute__((aligned(64))) = {
+    .palette = 1,
+    .colsb = {64, 64, 64, 64, 64, 64, 64, 64},
+    .rows = {16, 16, 16, 16, 16, 16, 16, 16},
+};
 
 /* Configure tiles for TileCDC, remembering any configuration the calling thread
    had, and put it back afterwards. Tile register contents are not preserved:
    do not call TileCDC while holding live data in tile registers. */
 __attribute__((target("amx-tile")))
 static void amx_configure(tilecfg *saved) {
-    tilecfg c;
     memset(saved, 0, sizeof *saved);
     _tile_storeconfig(saved);
-    memset(&c, 0, sizeof c);
-    c.palette = 1;
-    for (int i = 0; i < 8; i++) { c.colsb[i] = 64; c.rows[i] = 16; }
-    _tile_loadconfig(&c);
+    __asm__ volatile("" ::: "memory");
+    _tile_loadconfig(&TILECDC_CFG);
 }
 __attribute__((target("amx-tile")))
 static void amx_release(const tilecfg *saved) {
+    __asm__ volatile("" ::: "memory");
     if (saved->palette) _tile_loadconfig(saved);
     else _tile_release();
 }
